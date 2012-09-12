@@ -22,3 +22,17 @@ def minecraft_read_double(socket):
 
 def minecraft_read_float(socket):
 	return struct.unpack('>f', socket.recv(4))[0]
+
+def minecraft_read_slot(socket):
+	returner = []
+	start = minecraft_read_short(socket)
+	if start == -1:
+		return returner
+	
+	else:
+		item_count = minecraft_read_byte(socket)
+		item_damage = minecraft_read_short(socket)
+		item_meta_length = minecraft_read_short(socket)
+		if item_meta_length != -1:
+			socket.recv(item_meta_length)
+	return returner
