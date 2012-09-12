@@ -3,4 +3,5 @@ import time
 import struct
 import tuxcraft_tools
 def command(thread):
-	print 'Close Window ' +	str(tuxcraft_tools.minecraft_read_byte(thread.channel)) # Window id
+	print 'Client Statuses'
+	input = tuxcraft_tools.minecraft_read_byte() # Bitfield

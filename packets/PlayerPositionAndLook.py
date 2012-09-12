@@ -3,7 +3,7 @@ import time
 import struct
 import tuxcraft_tools
 def command(thread):
-	print 'Player Position and Look'
+#	print 'Player Position and Look'
 
 	thread.X = tuxcraft_tools.minecraft_read_double(thread.channel)
 	thread.Y = tuxcraft_tools.minecraft_read_double(thread.channel)
@@ -12,7 +12,7 @@ def command(thread):
 	thread.Yaw = tuxcraft_tools.minecraft_read_float(thread.channel)
 	thread.Pitch = tuxcraft_tools.minecraft_read_float(thread.channel)
 	thread.OnGround = tuxcraft_tools.minecraft_read_byte(thread.channel)
-	print thread.X, thread.Y, thread.Stance, thread.Z, thread.Yaw, thread.Pitch, thread.OnGround
+#	print thread.X, thread.Y, thread.Stance, thread.Z, thread.Yaw, thread.Pitch, thread.OnGround
 #	thread.channel.send(b'\x0D'+struct.pack('>ddddffb', thread.X, thread.Stance, thread.Y, thread.Z, thread.Yaw, thread.Pitch, thread.OnGround))
 	#thread.channel.send(b'\x0D'+struct.pack('>ddddffb', thread.X, thread.Stance, thread.Y, thread.Z, thread.Yaw, thread.Pitch, thread.OnGround))
 	#thread.channel.send( b'\xff' + tuxcraft_tools.minecraft_string(u'Du identifierade dig') )
