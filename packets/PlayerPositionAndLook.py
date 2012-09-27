@@ -12,6 +12,7 @@ def command(thread):
 	thread.Yaw = tuxcraft_tools.minecraft_read_float(thread.channel)
 	thread.Pitch = tuxcraft_tools.minecraft_read_float(thread.channel)
 	thread.OnGround = tuxcraft_tools.minecraft_read_byte(thread.channel)
+	thread.chunker.trigger_move(thread)
 #	print thread.X, thread.Y, thread.Stance, thread.Z, thread.Yaw, thread.Pitch, thread.OnGround
 #	thread.channel.send(b'\x0D'+struct.pack('>ddddffb', thread.X, thread.Stance, thread.Y, thread.Z, thread.Yaw, thread.Pitch, thread.OnGround))
 	#thread.channel.send(b'\x0D'+struct.pack('>ddddffb', thread.X, thread.Stance, thread.Y, thread.Z, thread.Yaw, thread.Pitch, thread.OnGround))

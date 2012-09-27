@@ -2,14 +2,16 @@
 import time
 import struct
 import tuxcraft_tools
+
 def command(thread):
 #	print 'Player Position'
-
+	
 	thread.X = tuxcraft_tools.minecraft_read_double(thread.channel)
 	thread.Y = tuxcraft_tools.minecraft_read_double(thread.channel)
 	thread.Stance = tuxcraft_tools.minecraft_read_double(thread.channel)
 	thread.Z = tuxcraft_tools.minecraft_read_double(thread.channel)
 	thread.OnGround = tuxcraft_tools.minecraft_read_byte(thread.channel)
+	thread.chunker.trigger_move(thread)
 #	print thread.X, thread.Y, thread.Stance, thread.Z, thread.OnGround
 	#thread.channel.send( b'\xff' + tuxcraft_tools.minecraft_string(u'Du identifierade dig') )
 	#time.sleep(5) # The procol docs state that this is necessery due to a bug in the client

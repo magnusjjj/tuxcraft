@@ -6,6 +6,7 @@ import packets.PlayerPosition
 import packets.PlayerLook
 import packets.PlayerPositionAndLook
 import packets.PlayerDigging
+import packets.PlayerBlockPlacement
 import packets.Animation
 import packets.EntityAction
 import packets.CloseWindow
@@ -25,6 +26,7 @@ commands = {
 		12: packets.PlayerLook.command,
 		13: packets.PlayerPositionAndLook.command,
 		14: packets.PlayerDigging.command,
+		15: packets.PlayerBlockPlacement.command,
 		18: packets.Animation.command,
 		19: packets.EntityAction.command,
 		101: packets.CloseWindow.command,

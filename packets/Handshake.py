@@ -12,4 +12,4 @@ def command(thread):
 	print thread.ProtocolVersion, thread.Username, thread.ServerHost, thread.ServerPort
 	#thread.channel.send( b'\xff' + tuxcraft_tools.minecraft_string(u'Du identifierade dig') )
 	#time.sleep(5) # The procol docs state that this is necessery due to a bug in the client
-	thread.channel.send( b'\x01' + struct.pack('>i', 1238) + tuxcraft_tools.minecraft_string(u'default') + b'\x00\x00\x00\x00\x08' )
+	thread.send( b'\x01' + struct.pack('>i', 1238) + tuxcraft_tools.minecraft_string(u'default') + b'\x00\x00\x00\x00\x08' )
