@@ -4,6 +4,7 @@ import struct
 import tuxcraft_tools
 
 def command(thread):
+
 #	print 'Player Position'
 	
 	thread.X = tuxcraft_tools.minecraft_read_double(thread.channel)
